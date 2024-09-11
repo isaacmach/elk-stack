@@ -1,0 +1,20 @@
+trigger:
+- main  
+
+pool:
+  name: 'DESKTOP-R1R7M24'  # Nome do seu pool auto-hospedado
+
+steps:
+# Fazer o checkout do código do GitHub (usando a conexão vinculada)
+- checkout: self  # Checkout automático do repositório vinculado
+
+# Instalar o Docker (se necessário)
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: 'latest'
+
+# Executar Docker Compose
+- script: |
+    docker-compose -f $(Build.SourcesDirectory)/docker-compose.yml up -d
+  displayName: 'Executar Docker Compose'
+v
