@@ -11,7 +11,7 @@ steps:
 # Instalar o Docker (se necessário)
 - task: DockerInstaller@0
   inputs:
-    dockerVersion: 'latest'
+    dockerVersion: '27.2.1'
 
 # Executar Docker Compose
 - script: |
