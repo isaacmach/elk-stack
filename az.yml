@@ -2,7 +2,7 @@ trigger:
 - main  
 
 pool:
-  name: 'DESKTOP-R1R7M24'  # Nome do seu pool auto-hospedado
+  name: 'Default'  # Nome do seu pool auto-hospedado
 
 steps:
 # Fazer o checkout do código do GitHub (usando a conexão vinculada)
